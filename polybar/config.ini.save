@@ -1,0 +1,95 @@
+; Author:       Arszilla
+; Github:       https://github.com/Arszilla
+; Gitlab:       https://gitlab.com/Arszilla
+; Twitter:      https://twitter.com/Arszilla
+;
+; License:      MIT License
+; License URL:  https://gitlab.com/Arszilla/i3-dotfiles/-/blob/main/LICENSE
+;
+; polybar Config File
+; polybar Version: 3.6.3
+
+[global/wm]
+; Import the configurations:
+;; Import the colors from the colors.ini file:
+include-file        = ~/.config/polybar/config.d/colors.ini
+
+;; Import the individual modules:
+;; Comment out battery.ini if you're on a desktop:
+include-file        = ~/.config/polybar/config.d/battery.ini
+include-file        = ~/.config/polybar/config.d/date.ini
+include-file        = ~/.config/polybar/config.d/i3.ini
+include-file        = ~/.config/polybar/config.d/logo.ini
+include-file        = ~/.config/polybar/config.d/networking.ini
+include-file        = ~/.config/polybar/config.d/powermenu.ini
+include-file        = ~/.config/polybar/config.d/pulseaudio.ini
+
+;; Comment out xkeyboard.ini if you're only using a single keyboard layout:
+include-file        = ~/.config/polybar/config.d/xkeyboard.ini
+include-file        = ~/.config/polybar/config.d/xwindow.ini
+
+screenchange-reload = true
+pseudo-transparency = true
+
+[bar/main]
+width               = 98%
+height              = 20pt
+radius              = 5
+
+offset-x            = 1%
+offset-y            = 10px
+
+override-redirect   = true
+
+monitor             = ${env:MONITOR:}
+
+;dpi                 = 96
+
+background          = ${colors.transparent}
+foreground          = ${colors.foreground}
+
+line-size           = 3pt
+
+border-size         = 4pt
+border-color        = ${colors.transparent}
+
+padding-left        = 0
+padding-right       = 1
+
+module-margin       = 1
+
+separator           =
+
+#font-0              = JetBrainsMono Nerd Font:style=Regular:size=10
+#font-1              = FiraCode Nerd Font:style=Regular:size=10
+#font-3		    = Noto Color Emoji:style=Regular:size=10
+#font-4 		    = "Noto Sans:size=10;3"
+
+font-0 = JetBrainsMono Nerd Font:style=Regular:size=10
+font-1 = FiraCode Nerd Font:style=Regular:size=10
+font-3 = Noto Color Emoji:style=Regular:size=10
+font-4 = "Noto Sans:size=10;3"
+
+font-5 = "Font Awesome 6 Free:bold:pixelsize=10;2"
+font-6 = "Weather Icons:style=Regular:size=15;3"       
+font-7 = "Iosevka Nerd Font:size=17.5;3"              
+font-8 = "feather:size=17;3"                          
+font-9 = "Monofur Nerd Font:style=Retina:size=15;3"
+
+
+modules-left        = logo i3 xwindow
+modules-center      = date
+modules-right       = pulseaudio battery wlan eth powermenu
+
+; modules-right       = pulseaudio xkeyboard wlan eth powermenu
+
+cursor-click        = pointer
+cursor-scroll       = ns-resize
+
+enable-ipc          = true
+
+wm-restack          = i3
+
+
+
+
