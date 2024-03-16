@@ -1,19 +1,5 @@
 #!/bin/bash
 
-# Array of folders to copy
-folders=("Thunar" "dunst" "kitty" "nitrogen" "polybar" "ranger" "xfce4" "cherrytree" "flameshot" "nautilus" "picom" "powershell" "rofi" "i3")
-
-# Destination directory
-destination="$HOME/.config"
-
-# Loop through each folder and copy it to the destination
-for folder in "${folders[@]}"; do
-    echo "Copying $folder to $destination"
-    cp -r "$folder" "$destination"
-done
-
-echo "Copying completed."
-
 # Update package lists
 sudo apt update
 
@@ -80,6 +66,21 @@ unzip -o /tmp/fontawesome-free-6.5.1-desktop.zip -d /tmp/fontawesome-free-6.5.1-
 sudo mkdir -p /usr/share/fonts/fontawesome-free
 sudo mv /tmp/fontawesome-free-6.5.1-desktop/otfs/*.otf /usr/share/fonts/fontawesome-free
 fc-cache -f -v
+
+# Array of folders to copy
+folders=("Thunar" "dunst" "kitty" "nitrogen" "polybar" "ranger" "xfce4" "cherrytree" "flameshot" "nautilus" "picom" "powershell" "rofi" "i3")
+
+# Destination directory
+destination="$HOME/.config"
+
+# Loop through each folder and copy it to the destination
+for folder in "${folders[@]}"; do
+    echo "Transferring $folder to $destination"
+    cp -r "$folder" "$destination"
+done
+
+echo "Copying completed."
+
 
 cd
 
