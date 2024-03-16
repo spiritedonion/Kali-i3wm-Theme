@@ -18,7 +18,26 @@ echo "Copying completed."
 sudo apt update
 
 # Install required packages
-sudo apt install cherrytree dunst flameshot libgtk-3-0 i3 kitty mime-editor nautilus nitrogen picom polybar powershell pulseaudio ranger rofi thunar xfce4 -y
+#sudo apt install cherrytree dunst flameshot libgtk-3-0 i3 kitty mime-editor nautilus nitrogen picom polybar powershell pulseaudio ranger rofi thunar xfce4 -y
+
+sudo apt install cherrytree -y
+sudo apt install dunst -y
+sudo apt install flameshot -y
+sudo apt install libgtk-3-0 -y
+sudo apt install i3 -y
+sudo apt install kitty -y
+sudo apt install mime-editor -y
+sudo apt install nautilus -y
+sudo apt install nitrogen -y
+sudo apt install picom -y
+sudo apt install polybar -y
+sudo apt install powershell -y
+sudo apt install pulseaudio -y
+sudo apt install ranger -y
+sudo apt install rofi -y
+sudo apt install thunar -y
+sudo apt install xfce4 -y
+
 
 #Fonts
 wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
@@ -33,10 +52,10 @@ sudo mkdir -p /usr/share/fonts/truetype/FiraCode
 sudo mv /tmp/FiraCode/*.ttf /usr/share/fonts/truetype/FiraCode
 fc-cache -f -v
 
-sudo apt-get install fonts-noto-color-emoji
+sudo apt-get install fonts-noto-color-emoji -y
 
 # Already installed on many systems, but if not:
-sudo apt-get install fonts-noto
+sudo apt-get install fonts-noto -y
 
 wget -P /tmp https://github.com/erikflowers/weather-icons/archive/master.zip
 unzip -o /tmp/master.zip -d /tmp
@@ -84,6 +103,8 @@ echo "
 ██║░░╚═╝██║░░██║██╔████╔██║██████╔╝██║░░░░░█████╗░░░░░██║░░░█████╗░░██║░░██║
 ██║░░██╗██║░░██║██║╚██╔╝██║██╔═══╝░██║░░░░░██╔══╝░░░░░██║░░░██╔══╝░░██║░░██║
 ╚█████╔╝╚█████╔╝██║░╚═╝░██║██║░░░░░███████╗███████╗░░░██║░░░███████╗██████╔╝
-░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚═╝░░░░░╚══════╝╚══════╝░░░╚═╝░░░╚══════╝╚═════╝░"
+░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚═╝░░░░░╚══════╝╚══════╝░░░╚═╝░░░╚══════╝╚═════╝░
 
-sudo reboot now
+Reboot Your System"
+
+
